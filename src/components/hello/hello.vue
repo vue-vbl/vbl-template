@@ -11,7 +11,7 @@
         name: 'hello',
         data() {
             return {
-                msg: 'hello world!'
+                 msg: 'hello world!'
             };
         },
         computed: {
@@ -33,5 +33,7 @@
         .time {
             font-size: 12px;
         }
+    
     }
 </style>
+

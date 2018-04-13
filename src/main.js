@@ -4,13 +4,12 @@ import VueRouter from 'vue-router';
 import VueVbl from 'vue-vbl';
 import app from './components/app';
 import * as filters from './utils/filters';
-import * as rules from './utils/rules';
 import routes from './routes';
-import 'vue-vbl/lib/static/css/vue-vbl.css';
+import 'vue-vbl/dist/vue-vbl.css';
 
-Vue.use(VueVbl);
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueVbl);
 
 /*
  * loading

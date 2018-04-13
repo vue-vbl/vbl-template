@@ -1,5 +1,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var port = 9999
+var localPath = `http://localhost:${port}/`
 
 module.exports = {
   build: {
@@ -7,6 +9,7 @@ module.exports = {
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    assetsCssPublicPath: '../../',
     assetsPublicPath: './',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
@@ -23,20 +26,20 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 9999,
+    port: port,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'http://localhost:9999/',
-//    proxyTable: {},
+    assetsCssPublicPath: localPath,
+    assetsPublicPath: localPath,
     proxyTable: {
-      '/noaapp': {
-          target: 'https://yxapp.yixincapital.com',
-          changeOrigin: true,
-          pathRewrite: {
-              '^/noaapp': '/noaapp'
-          }
-      }
-  },
+        '/noaapp': {
+            target: 'https://yxapp.yixincapital.com',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/noaapp': '/noaapp'
+            }
+        }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
