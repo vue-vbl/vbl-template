@@ -1,6 +1,6 @@
 {
-  "name": "vue_template_2.0",
-  "version": "1.0.0",
+  "name": "vbl-template",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
     "dev": "node build/dev-server.js",
