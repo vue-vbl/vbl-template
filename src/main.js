@@ -7,6 +7,8 @@ import * as filters from './utils/filters';
 import routes from './routes';
 import 'vue-vbl/dist/vue-vbl.css';
 
+import '~assets/style.less';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VueVbl);
